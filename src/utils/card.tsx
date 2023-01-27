@@ -4,30 +4,36 @@ import ImgPreescolar from '/kinder.jpg'
 import ImgPrepa from '/prepa.jpg'
 import ImgBackground from '/background.jpg'
 
+import { Link } from 'react-router-dom'
+
 const mockdata = [
   {
     titulo: 'Bachillerato Tecnológico',
     imagen:
       ImgPrepa,
     seccion: 'BTECVI Villareal',
+    link: '/secciones/bachillerato',
   },
   {
     titulo: 'Secundaria Técnica',
     imagen:
-      ImgBackground,
+      'https://usc1.contabostorage.com/4dff45e2e3c74b3ba6ff7cc8146f2c3a:btecvi/navidad.jpg',
     seccion: 'Colegio Bilingüe Juventus',
+    link: '/secciones/secundaria',
   },
   {
-    titulo: 'Primaria',
+    titulo: 'Primaria (PROXIMAMENTE)',
     imagen:
       ImgBackground,
-    seccion: 'Colegio Bilingüe Juventus',
+    seccion: 'Colegio Bilingüe Juventus (PROXIMAMENTE)',
+    link: '/',
   },
   {
     titulo: 'Preescolar (PROXIMAMENTE)',
     imagen:
       ImgPreescolar,
     seccion: 'Colegio Bilingüe Juventus (PROXIMAMENTE)',
+    link: '/',
   },
 ];
 
@@ -50,18 +56,20 @@ const useStyles = createStyles((theme) => ({
 export function ArticlesCardsGrid() {
   const { classes } = useStyles();
 
-  const cards = mockdata.map((article) => (
-    <Card key={article.titulo} p="md" radius="md" component="a" href="#" style={{ border: '1px solid #dee2e6' }} className={classes.card}>
+  const cards = mockdata.map((seccion) => (
+    <Link to={seccion.link} key={seccion.titulo}>
+    <Card key={seccion.titulo} p="md" radius="md" style={{ border: '1px solid #dee2e6' }} className={classes.card}>
       <AspectRatio ratio={1920 / 1080}>
-        <Image src={article.imagen} />
+        <Image src={seccion.imagen} />
       </AspectRatio>
       <Text color="dimmed" size="xs" transform="uppercase" weight={700} mt="md">
-        {article.seccion}
+        {seccion.seccion}
       </Text>
       <Text className={classes.titulo} mt={5}>
-        {article.titulo}
+        {seccion.titulo}
       </Text>
     </Card>
+    </Link>
   ));
 
   return (

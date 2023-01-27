@@ -1,6 +1,3 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-
 import { Route, Routes } from "react-router-dom";
 
 
@@ -10,6 +7,10 @@ import PaginaInicio from "./pages";
 import Error404 from "./pages/404";
 
 import Bachillerato from "./pages/secciones/bachillerato";
+
+import PaginaGrupo from "./pages/secciones/components/paginaGrupo";
+
+import Secundaria from "./pages/secciones/secundaria";
 
 function Tiki() {
   return (
@@ -25,12 +26,17 @@ function Tiki() {
         </Route>
         <Route path="/secciones">
           <Route path="bachillerato" element={<Bachillerato />} />
-          <Route path="secundaria" element={<p>Secundaria</p>} />
+          <Route path="secundaria" element={<Secundaria />} />
           <Route path="primaria" element={<p>Proximamente</p>} />
           <Route path="preescolar" element={<p>Proximamente</p>} />
           <Route path="maternal" element={<p>Proximamente</p>} />
 
           <Route path="" element={<p>Sin seccion</p>} />
+        </Route>
+
+        <Route path="/grupo">
+
+          <Route path="*" element={<PaginaGrupo />} />
         </Route>
 
         <Route path="/dev/inicio" element={<p>Inicio</p>} />

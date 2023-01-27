@@ -16,3 +16,9 @@ body {
 .mantine-Drawer-title	{
   font-weight: 600;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}

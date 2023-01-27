@@ -10,12 +10,12 @@ import CSS from '../style.module.css'
 import { Promocion } from "../../utils/promocion";
 
 const renderizarGrupos = [
-  { titulo: "6to Semestre", icon: IconSchool, color: "yellow", link: '/grupo/7418150382' },
-  { titulo: "4to Semestre", icon: IconMicroscope, color: "indigo", link: '/grupo/5011136854' },
-  { titulo: "2do Semestre", icon: IconBooks, color: "red", link: '/grupo/9554775786' },
+  { titulo: "3er Grado", icon: IconSchool, color: "yellow", link: '/grupo/7418150382' },
+  { titulo: "2do Grado", icon: IconMicroscope, color: "indigo", link: '/grupo/5011136854' },
+  { titulo: "1er Grado", icon: IconBooks, color: "red", link: '/grupo/9554775786' },
 ];
 
-export default function Bachillerato() {
+export default function Secundaria() {
   return (
     <div>
       <h1 className={CSS.header}>Selecciona un grupo</h1>
