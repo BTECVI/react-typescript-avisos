@@ -67,7 +67,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export function EmailBanner() {
+export function Promocion() {
   const { classes } = useStyles();
   return (
     <div style={{ margin: '10px 15px' }}>
