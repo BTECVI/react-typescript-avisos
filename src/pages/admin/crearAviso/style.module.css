@@ -1,0 +1,14 @@
+.main {
+  margin: 10px;
+}
+
+.editor {
+  display: flex;
+  justify-content: center;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

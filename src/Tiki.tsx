@@ -24,7 +24,7 @@ function Tiki() {
         <Route path="/" element={<PaginaInicio /> } />
 
         <Route path="/aviso">
-          <Route path=":id/*" element={<Aviso />} />
+          <Route path=":avisoId/*" element={<Aviso />} />
 
           <Route path="" element={<p>Aviso sin id</p>} />
         </Route>

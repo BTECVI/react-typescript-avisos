@@ -1,7 +1,8 @@
-html {
+img {
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   background-color: #f8f9fa;
+  font-size: 1000px;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -9,6 +10,7 @@ html {
 }
 body {
   margin: 0;
+  background-color: #f8f9fa;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -21,4 +23,10 @@ a {
   text-decoration: none;
   color: black;
   font-weight: 600;
+}
+
+@media screen and (max-width: 500px) {
+  #tinymce {
+    font-size: 5px;
+  }
 }
