@@ -12,6 +12,10 @@ import PaginaGrupo from "./pages/secciones/components/paginaGrupo";
 
 import Secundaria from "./pages/secciones/secundaria";
 
+import CrearAviso from "./pages/admin/crearAviso";
+
+import Aviso from "./pages/aviso";
+
 function Tiki() {
   return (
     <div className="Tiki">
@@ -20,7 +24,7 @@ function Tiki() {
         <Route path="/" element={<PaginaInicio /> } />
 
         <Route path="/aviso">
-          <Route path=":id/*" element={<p>Aviso renderizado con el id</p>} />
+          <Route path=":id/*" element={<Aviso />} />
 
           <Route path="" element={<p>Aviso sin id</p>} />
         </Route>
@@ -37,6 +41,11 @@ function Tiki() {
         <Route path="/grupo">
 
           <Route path="*" element={<PaginaGrupo />} />
+        </Route>
+
+        <Route path="/admin">
+
+          <Route path="*" element={<CrearAviso />} />
         </Route>
 
         <Route path="/dev/inicio" element={<p>Inicio</p>} />
