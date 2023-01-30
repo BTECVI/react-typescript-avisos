@@ -3,6 +3,8 @@ import { Card, Text, Group, Center, createStyles } from '@mantine/core';
 
 import { Link } from 'react-router-dom';
 
+import CSS from './avisoIndividual.module.css'
+
 const useStyles = createStyles((theme, _params, getRef) => {
   const image: any = getRef('image');
 
@@ -78,7 +80,9 @@ export function AvisoIndividual({ image, titulo, autor, visitas, horaPublicada, 
   console.log(horaPublicada)
 
   return (
-    <Link to={link} key={link} style={{ width: '500px' }}>
+    <div style={{margin: '15px', width: '500px', background: 'white'}} className={CSS.card}>
+    <Link to={link} key={link}>
+      <div className={CSS.fechaproxima}>Sucede en 5 dias</div>
       <Card
         p="lg"
         shadow="lg"
@@ -118,5 +122,6 @@ export function AvisoIndividual({ image, titulo, autor, visitas, horaPublicada, 
         </div>
       </Card>
     </Link>
+    </div>
   );
 }

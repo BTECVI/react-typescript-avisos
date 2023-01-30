@@ -26,7 +26,7 @@ import {
   IconChevronDown,
 } from "@tabler/icons-react";
 
-import logoBtecvi from "../assets/btecvi.jpg";
+const logoBtecvi = 'https://cdn.btecvi.com/btecvi.jpg'
 
 import { Link } from "react-router-dom";
 

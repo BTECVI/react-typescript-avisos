@@ -25,8 +25,18 @@ export default function CrearAviso() {
     console.log(valorSalon)
     console.log(`Titulo de aviso: ${tomarTitulo()}
     
-A que secciones va dirigido del aviso: ${valorSecciones}`)
+A que secciones va dirigido del aviso: ${valorSecciones}
+
+Codigo HTML: ${log()}`)
   }
+
+  const editorRef = useRef<any>(null);
+
+  const log = () => {
+    if (editorRef.current) {
+      return editorRef.current.getContent();
+    }
+  };
   return (
     <>
       <div className={CSS.main}>
@@ -40,7 +50,7 @@ A que secciones va dirigido del aviso: ${valorSecciones}`)
           />
         </div>
         <div className={CSS.editor}>
-          <CrearEditor />
+          <CrearEditor traerInfo={editorRef}/>
         </div>
       </div>
       <button onClick={() => solicitud()}>Cargar solicitud en consola</button>

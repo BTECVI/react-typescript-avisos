@@ -1,14 +1,9 @@
-import { useRef } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
-export default function CrearEditor() {
-  const editorRef = useRef<any>(null);
-  const log = () => {
-    if (editorRef.current) {
-      console.log(editorRef.current.getContent());
-    }
-  };
-  const valorInicial = '<table style="border-collapse: collapse; width: 100%; height: 98.8px; border-width: 0px; border-style: hidden;" border="1"><colgroup><col style="width: 33.3333%;"><col style="width: 33.3333%;"><col style="width: 33.3333%;"></colgroup><tbody><tr style="height: 98.8px;"><td style="text-align: center; height: 98.8px; border-width: 0px;"><img src="https://cdn.btecvi.com/btecvi.jpg" alt="" width="70" height="79"></td><td style="text-align: center; height: 98.8px; border-width: 0px;"><p style="line-height: 1;"><strong><span style="font-size: 14pt;">BACHILLERATO TECNOL&Oacute;GICO DE VILLAREAL</span></strong></p></td><td style="text-align: center; height: 98.8px; border-width: 0px;"><img src="https://cdn.btecvi.com/dgeti_logo.png" alt="" width="79" height="73"></td></tr></tbody></table><p>-</p><p>Remplazar texto a partir de aqui.</p>'
+export default function CrearEditor({traerInfo}: any) {
+  const editorRef = traerInfo
+
+  const valorInicial = '<table style="border-collapse: collapse; width: 100%; height: 98.8px; border-width: 0px; border-style: hidden;" border="1"><colgroup><col style="width: 33.3333%;"><col style="width: 33.3333%;"><col style="width: 33.3333%;"></colgroup><tbody><tr style="height: 98.8px;"><td style="text-align: center; height: 98.8px; border-width: 0px;"><img src="https://cdn.btecvi.com/btecvi.jpg" alt="" width="70" height="79"></td><td style="text-align: center; height: 98.8px; border-width: 0px;"><p style="line-height: 1;"><strong><span style="font-size: 14pt;">BACHILLERATO TECNOL&Oacute;GICO DE VILLAREAL</span></strong></p></td><td style="text-align: center; height: 98.8px; border-width: 0px;"><img src="https://cdn.btecvi.com/elemental/dgeti_logo.jpg" alt="" width="79" height="73"></td></tr></tbody></table><p>-</p><p>Remplazar texto a partir de aqui.</p>'
   return (
     <div style={{ maxWidth: '1200px', margin: '15px 5px'}}>
       <Editor

@@ -8,8 +8,8 @@ const ejemploArray = [
     image:
       "https://usc1.contabostorage.com/4dff45e2e3c74b3ba6ff7cc8146f2c3a:btecvi/avisos/votacion.jpg",
     link: "/aviso/pruebas_votacion",
-    titulo: "Votaciones de Sociedad de Alumnos / Bachillerato...",
-    autor: "Dirección Escolar",
+    titulo: "Votaciones para elegir una Sociedad de Alumnos. Sección Bachillerato",
+    autor: "Dirección",
     visitas: 567,
     horaPublicada: 5,
     id: 0,
