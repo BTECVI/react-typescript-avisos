@@ -1,8 +1,30 @@
 import { useParams, useSearchParams } from "react-router-dom"
 import CSS from './style.module.css'
 import GlobalCSS from '../style.module.css'
+import { useEffect } from "react"
+
+import api from '../../api/traerAvisos'
+
+import AddCookie from '../admin/auth/Cookies/addCookie'
 
 export default function AvisoIndividual () {
+
+
+
+
+  useEffect(() => {
+    const traerData = async () => {
+      try {
+        console.log(AddCookie('auth', '7943346e-230a-4d8c-8a4a-462752cea7d40-0835b022696a468a-363c1d62697be3a45d2e7469bb4896a8c1d1-373578e7-1675043945342'))
+        const response = await api.get('/')
+        console.log(response)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    traerData()
+  }, [])
+
   const params = useParams()
   const [queryParameters] = useSearchParams()
   const query = queryParameters.get('filtro')

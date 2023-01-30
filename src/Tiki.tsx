@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 
-
 import { HeaderMegaMenu } from "./components/navbar";
 
 import PaginaInicio from "./pages";
@@ -16,12 +15,17 @@ import CrearAviso from "./pages/admin/crearAviso";
 
 import Aviso from "./pages/aviso";
 
+import Admin from "./pages/admin/auth";
+
+import ValidateCookie from "./pages/admin/auth/Cookies/validateCookie";
+import { RutaProtegida } from "./components/RutaProtegida";
+
 function Tiki() {
   return (
     <div className="Tiki">
       <HeaderMegaMenu />
       <Routes>
-        <Route path="/" element={<PaginaInicio /> } />
+        <Route path="/" element={<PaginaInicio />} />
 
         <Route path="/aviso">
           <Route path=":avisoId/*" element={<Aviso />} />
@@ -39,18 +43,25 @@ function Tiki() {
         </Route>
 
         <Route path="/grupo">
-
           <Route path="*" element={<PaginaGrupo />} />
         </Route>
 
         <Route path="/admin">
-
-          <Route path="*" element={<CrearAviso />} />
+          <Route path="login" element={<Admin />} />
+          <Route element={<RutaProtegida auth={ValidateCookie()}/>}>
+            <Route
+              path="crear/aviso"
+              element={
+                  <CrearAviso />
+              }
+            />
+          </Route>
+          <Route path="*" element={<Error404 />} />
         </Route>
 
         <Route path="/dev/inicio" element={<p>Inicio</p>} />
         <Route path="/my-messages" element={<p>Mensajes</p>} />
-        <Route path="*" element={<Error404/>} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </div>
   );
