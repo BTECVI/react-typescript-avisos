@@ -6,74 +6,34 @@ import GlobalCSS from '../../style.module.css'
 const ejemploArray = [
   {
     image:
-      "https://usc1.contabostorage.com/4dff45e2e3c74b3ba6ff7cc8146f2c3a:btecvi/avisos/votacion.jpg",
-    link: "/aviso/pruebas_votacion",
+      "https://cdn.btecvi.com/avisos/votacion.jpg",
+    link: "/aviso/democracia",
     titulo: "Votaciones para elegir una Sociedad de Alumnos. Sección Bachillerato",
-    autor: "Dirección",
+    autor: "BTECVI",
     visitas: 567,
     horaPublicada: 5,
     id: 0,
   },
   {
     image:
-      "https://usc1.contabostorage.com/4dff45e2e3c74b3ba6ff7cc8146f2c3a:btecvi/paz.jpg",
-    link: "/",
-    titulo: "Titulo de Prueba 2... || Dia de la paz mundial",
-    autor: "FUA",
-    visitas: 3,
+      "https://cdn.btecvi.com/tests/mitin_bg.jpg",
+    link: "/aviso/votaciones",
+    titulo: "Mitin de planillas para elegir una Sociedad de Alumnos. Sección Bachillerato",
+    autor: "BTECVI",
+    visitas: 653,
     horaPublicada: 5,
     id: 1,
   },
   {
     image:
-      "https://usc1.contabostorage.com/4dff45e2e3c74b3ba6ff7cc8146f2c3a:btecvi/navidad.jpg",
-    link: "/",
-    titulo: "Titulo de Prueba...",
+      "https://cdn.btecvi.com/tests/imaginate_bg.jpg",
+    link: "/aviso/43xk423a1",
+    titulo: "Imagínate un aviso",
     autor: "FUA",
-    visitas: 3,
+    visitas: 543,
     horaPublicada: 5,
     id: 2,
   },
-  {
-    image:
-      "https://usc1.contabostorage.com/4dff45e2e3c74b3ba6ff7cc8146f2c3a:btecvi/navidad.jpg",
-    link: "/",
-    titulo: "Titulo de Prueba...",
-    autor: "FUA",
-    visitas: 3,
-    horaPublicada: 5,
-    id: 3,
-  },
-  {
-    image:
-      "https://usc1.contabostorage.com/4dff45e2e3c74b3ba6ff7cc8146f2c3a:btecvi/navidad.jpg",
-    link: "/",
-    titulo: "Titulo de Prueba 5...",
-    autor: "FUA",
-    visitas: 1,
-    horaPublicada: 5,
-    id: 4,
-  },
-  {
-    image:
-      "https://usc1.contabostorage.com/4dff45e2e3c74b3ba6ff7cc8146f2c3a:btecvi/navidad.jpg",
-    link: "/",
-    titulo: "Titulo de Prueba 6...",
-    autor: "FUA",
-    visitas: 3,
-    horaPublicada: 5,
-    id: 5,
-  },
-  {
-    image:
-      "https://usc1.contabostorage.com/4dff45e2e3c74b3ba6ff7cc8146f2c3a:btecvi/navidad.jpg",
-    link: "/",
-    titulo: "Titulo de Prueba 7...",
-    autor: "FUA",
-    visitas: 3,
-    horaPublicada: 5,
-    id: 6,
-  }
 ]
 
 export default function PaginaGrupo() {
@@ -90,7 +50,7 @@ export default function PaginaGrupo() {
   ));
   return (
     <div>
-      <h1 className={GlobalCSS.header} style={{ fontSize: '1em' }}>(avisos.btecvi.com  se encuentra en constante desarrollo, por el momento solo es una maquetación, antes del 1 de Febrero se lanzara una version funcional. Este mensaje desaparecera cuando sea estable el sistema)</h1>
+      <h1 className={GlobalCSS.header} style={{ fontSize: '1em' }}>(avisos.btecvi.com  se encuentra en constante desarrollo, si se encuentran fallos; pueden enviar un correo a: angel@lavin.cool - describiendo el problema. Este mensaje desaparecera cuando sea estable el sistema)</h1>
       <div className={CSS.avisos}>
         {items}
       </div>

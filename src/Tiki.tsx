@@ -13,12 +13,16 @@ import Secundaria from "./pages/secciones/secundaria";
 
 import CrearAviso from "./pages/admin/crearAviso";
 
-import Aviso from "./pages/aviso";
+import GetAuth from "./pages/aviso/tests/getAuth";
 
-import Admin from "./pages/admin/auth";
+import Login from "./pages/admin/auth/login";
 
 import ValidateCookie from "./pages/admin/auth/Cookies/validateCookie";
 import { RutaProtegida } from "./components/RutaProtegida";
+
+import AvisoId_43xk423a1 from "./pages/aviso/tests/avisoId_43xk423a1";
+import AvisoId_democracia from "./pages/aviso/tests/avisoId_democracia";
+import AvisoId_votaciones from "./pages/aviso/tests/avisoId_votaciones";
 
 function Tiki() {
   return (
@@ -28,8 +32,9 @@ function Tiki() {
         <Route path="/" element={<PaginaInicio />} />
 
         <Route path="/aviso">
-          <Route path=":avisoId/*" element={<Aviso />} />
-
+          <Route path="43xk423a1" element={<AvisoId_43xk423a1 />} />
+          <Route path="votaciones" element={<AvisoId_votaciones />} />
+          <Route path="democracia" element={<AvisoId_democracia />} />
           <Route path="" element={<p>Aviso sin id</p>} />
         </Route>
         <Route path="/secciones">
@@ -47,12 +52,13 @@ function Tiki() {
         </Route>
 
         <Route path="/admin">
-          <Route path="login" element={<Admin />} />
+          <Route path="login" element={<Login />} />
+          <Route path="auth" element={<GetAuth />} />
           <Route element={<RutaProtegida auth={ValidateCookie()}/>}>
             <Route
               path="crear/aviso"
               element={
-                  <CrearAviso />
+                <CrearAviso />
               }
             />
           </Route>
@@ -68,3 +74,5 @@ function Tiki() {
 }
 
 export default Tiki;
+
+// <Route path=":avisoId/*" element={<Aviso />} />

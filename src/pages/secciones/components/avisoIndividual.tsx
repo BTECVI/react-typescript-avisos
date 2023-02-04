@@ -82,7 +82,6 @@ export function AvisoIndividual({ image, titulo, autor, visitas, horaPublicada, 
   return (
     <div style={{margin: '15px', width: '500px', background: 'white'}} className={CSS.card}>
     <Link to={link} key={link}>
-      <div className={CSS.fechaproxima}>Sucede en 5 dias</div>
       <Card
         p="lg"
         shadow="lg"
@@ -125,3 +124,4 @@ export function AvisoIndividual({ image, titulo, autor, visitas, horaPublicada, 
     </div>
   );
 }
+  //<div className={CSS.fechaproxima}>Sucede en 5 dias</div>

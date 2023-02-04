@@ -1,0 +1,13 @@
+.formulario {
+  display: grid;
+  margin: 10px;
+}
+.formulario button {
+  margin: 10px;
+  background-color: white;
+  padding: 7px;
+  border-radius: 10px;
+  border: 2px solid #e9b14b;
+  color: #e9b14b;
+  cursor: pointer;
+}
