@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import { HeaderMegaMenu } from "./components/navbar";
 
@@ -24,7 +24,10 @@ import AvisoId_43xk423a1 from "./pages/aviso/tests/avisoId_43xk423a1";
 import AvisoId_democracia from "./pages/aviso/tests/avisoId_democracia";
 import AvisoId_votaciones from "./pages/aviso/tests/avisoId_votaciones";
 
+import 'react-toastify/dist/ReactToastify.css';
+
 function Tiki() {
+  console.log(ValidateCookie())
   return (
     <div className="Tiki">
       <HeaderMegaMenu />
@@ -52,7 +55,7 @@ function Tiki() {
         </Route>
 
         <Route path="/admin">
-          <Route path="login" element={<Login />} />
+          <Route path="login" element={<Login validateAuth={ValidateCookie()}/>} />
           <Route path="auth" element={<GetAuth />} />
           <Route element={<RutaProtegida auth={ValidateCookie()}/>}>
             <Route

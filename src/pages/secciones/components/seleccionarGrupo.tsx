@@ -11,10 +11,7 @@ import { Link } from "react-router-dom";
 
 const useStyles = createStyles((theme) => ({
   card: {
-    backgroundColor:
-      theme.colorScheme === "dark"
-        ? theme.colors.dark[6]
-        : theme.colors.gray[0],
+    backgroundColor: '#f5f5f5'  
   },
 
   titulo: {
